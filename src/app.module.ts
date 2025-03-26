@@ -3,10 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SalesModule } from './sales/sales.module';
-import { ProductsModule } from './products/products.module';
-import { UsuarioModule } from './usuario/usuario.module';
-import { LoginHistoryModule } from './login_history/login_history.module';
+
+import { CategoriasModule } from './categorias/categorias.module';
+import { ProductosModule } from './productos/productos.module';
 
 @Module({
   imports: [
@@ -23,10 +22,9 @@ import { LoginHistoryModule } from './login_history/login_history.module';
       synchronize: true, //solo en desarrollo , no en producccion
     }),
 
-    SalesModule,
-    ProductsModule,
-    UsuarioModule,
-    LoginHistoryModule,
+    CategoriasModule,
+
+    ProductosModule,
   ],
   controllers: [AppController],
   providers: [AppService],
