@@ -19,11 +19,10 @@ import { ProductosModule } from './productos/productos.module';
       database: process.env.DB_NAME,
       ssl: { rejectUnauthorized: false }, // IMPORTANTE PARA RENDER
       autoLoadEntities: true, //CARGAR ENTIDADES AUTOMATICAMENTE
-      synchronize: true, //solo en desarrollo , no en producccion
+      synchronize: false, //solo en desarrollo , no en producccion
     }),
 
     CategoriasModule,
-
     ProductosModule,
   ],
   controllers: [AppController],
